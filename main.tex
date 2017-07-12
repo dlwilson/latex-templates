@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec} %%To customize chapters, sections, and subsections
+\usepackage{comment} %%Enables use of comment sections.
+\usepackage{graphicx} %%For figures.
+\usepackage{hyperref} %%For hyperlinks.
+\usepackage{pgfgantt} %%To create Gantt charts.
+%% Code to format chapter headings
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Chapter \ \thechapter} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\title{My Diary}
+\author{My Name}
+\date{20XX}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{ch1.tex}
+%\input{ch2.tex}
+%\input{ch3.tex}
+%\input{ch4.tex}
+
+\end{document}
